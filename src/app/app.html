@@ -3,51 +3,51 @@
     <div class="content">
         <div class="left">
             <div class="calc_type">Standard</div>
-            <div class="calc_display">0</div>
+            <div class="calc_display">{{ result }}</div>
             <div class="calc_buttons">
                 <div class="row">
-                    <div class="button">MC</div>
-                    <div class="button">MR</div>
-                    <div class="button">M+</div>
-                    <div class="button">M-</div>
-                    <div class="button">MS</div>
-                    <div class="button">Mv</div>
+                    <div (click)="clickCalculate('MC')" class="button">MC</div>
+                    <div (click)="clickCalculate('MR')" class="button">MR</div>
+                    <div (click)="clickCalculate('M+')" class="button">M+</div>
+                    <div (click)="clickCalculate('M-')" class="button">M-</div>
+                    <div (click)="clickCalculate('MS')" class="button">MS</div>
+                    <div (click)="clickCalculate('Mv')" class="button">Mv</div>
                 </div>
                 <div class="row">
-                    <div class="button">%</div>
-                    <div class="button">CE</div>
-                    <div class="button">C</div>
-                    <div class="button">backspace</div>
+                    <div (click)="clickCalculate('%')" class="button">%</div>
+                    <div (click)="clickCalculate('CE')" class="button">CE</div>
+                    <div (click)="clickCalculate('/')" class="button">C</div>
+                    <div (click)="clickCalculate('backspace')" class="button">backspace</div>
                 </div>
                 <div class="row">
-                    <div class="button">1/x</div>
-                    <div class="button">x^2</div>
-                    <div class="button">sqrtx</div>
-                    <div class="button">/</div>
+                    <div (click)="clickCalculate('1/x')" class="button">1/x</div>
+                    <div (click)="clickCalculate('x^2')" class="button">x^2</div>
+                    <div (click)="clickCalculate('sqrtx')" class="button">sqrtx</div>
+                    <div (click)="clickCalculate('/')" class="button">/</div>
                 </div>
                 <div class="row">
-                    <div class="button">7</div>
-                    <div class="button">8</div>
-                    <div class="button">9</div>
-                    <div class="button">x</div>
+                    <div (click)="clickNumber(7)" class="button">7</div>
+                    <div (click)="clickNumber(8)" class="button">8</div>
+                    <div (click)="clickNumber(9)" class="button">9</div>
+                    <div (click)="clickCalculate('*')" class="button">x</div>
                 </div>
                 <div class="row">
-                    <div class="button">4</div>
-                    <div class="button">5</div>
-                    <div class="button">6</div>
-                    <div class="button">-</div>
+                    <div (click)="clickNumber(4)" class="button">4</div>
+                    <div (click)="clickNumber(5)" class="button">5</div>
+                    <div (click)="clickNumber(6)" class="button">6</div>
+                    <div (click)="clickCalculate('-')" class="button">-</div>
                 </div>
                 <div class="row">
-                    <div class="button">1</div>
-                    <div class="button">2</div>
-                    <div class="button">3</div>
-                    <div class="button">+</div>
+                    <div (click)="clickNumber(1)" class="button">1</div>
+                    <div (click)="clickNumber(2)" class="button">2</div>
+                    <div (click)="clickNumber(3)" class="button">3</div>
+                    <div (click)="clickCalculate('+')" class="button">+</div>
                 </div>
                 <div class="row">
-                    <div class="button">+/-</div>
-                    <div class="button">0</div>
-                    <div class="button">.</div>
-                    <div class="button">=</div>
+                    <div (click)="clickCalculate('+/-')" class="button">+/-</div>
+                    <div (click)="clickNumber(0)" class="button">0</div>
+                    <div (click)="clickCalculate('.')" class="button">.</div>
+                    <div (click)="clickCalculate('=')" class="button">=</div>
                 </div>
             </div>
         </div>
