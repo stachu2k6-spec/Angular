@@ -27,14 +27,25 @@ $text-light: #EAEAEA;
         font-size: 2rem;
       }
 
-      .calc_display {
-        height: 20%;
-        background: $background-dark;
-        color: $text-light;
+      .calculating {
+        height: 5%;
+        color: gray;
+        background-color: $background-dark;
+        font-size: 1rem;
         display: flex;
         align-items: center;
         justify-content: flex-end;
+      }
+
+      .calc_display {
+        height: 15%;
+        background: $background-dark;
+        color: $text-light;
         font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
       }
 
       .calc_buttons {

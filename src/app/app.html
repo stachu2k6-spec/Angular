@@ -3,6 +3,7 @@
     <div class="content">
         <div class="left">
             <div class="calc_type">Standard</div>
+            <div class="calculating">{{ countingResult }}</div>
             <div class="calc_display">{{ result }}</div>
             <div class="calc_buttons">
                 <div class="row">
@@ -16,7 +17,7 @@
                 <div class="row">
                     <div (click)="clickCalculate('%')" class="button">%</div>
                     <div (click)="clickCalculate('CE')" class="button">CE</div>
-                    <div (click)="clickCalculate('/')" class="button">C</div>
+                    <div (click)="clickCalculate('C')" class="button">C</div>
                     <div (click)="clickCalculate('backspace')" class="button">backspace</div>
                 </div>
                 <div class="row">
