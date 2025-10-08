@@ -1,0 +1,101 @@
+$background-dark: #343434; // VS Code–style gray
+$text-light: #EAEAEA;
+
+.wrapper {
+  height: 100%;
+
+  .top_bar {
+    height: 10%;
+    background-color: $background-dark;
+    color: white;
+  }
+
+  .content {
+    height: 90%;
+    background: $background-dark;
+    display: flex;
+
+    .left {
+      width: 70%;
+      height: 100%;
+      background: $background-dark;
+
+      .calc_type {
+        height: 10%;
+        background: $background-dark;
+        color: $text-light;
+        font-size: 2rem;
+      }
+
+      .calc_display {
+        height: 20%;
+        background: $background-dark;
+        color: $text-light;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 3rem;
+      }
+
+      .calc_buttons {
+        height: 70%;
+        background: $background-dark;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .row {
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+
+          .button {
+            width: 100%;
+            background-color: darkgray;
+            margin: 1px;
+            border: solid 1px grey;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: $text-light;
+            border-radius: 4px;
+            transition: background-color 0.2s, transform 0.1s;
+
+            &:hover {
+              background: lighten(darkgray, 10%);
+              cursor: pointer;
+            }
+
+            &:active {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+    }
+  }
+
+    .right {
+      width: 30%;
+      height: 100%;
+      background: lightgreen;
+    }
+  }
+
+
+@media (max-width: 600px) {
+  .wrapper {
+    .content {
+      .left {
+        width: 100%;
+        background: lightcoral;
+      }
+
+      .right {
+        display: none;
+      }
+    }
+  }
+
+}
