@@ -35,22 +35,50 @@ export class App {
     clickCalculate(value: Signature) {
         switch(value) {
             case 'C':
+              console.log('click clear');
                 this.result = '0';
                 break;
+            case 'CE':
+              console.log('click clear everything');
+              this.result = '0';
+              this.countingResult = '';
+              break;
             case '/':
                 console.log('click divide');
+                this.countingResult = this.result + " /";
+                this.result = '';
                 break;
             case '*':
                 console.log('click multiply');
+                this.countingResult = this.result + " *";
+                this.result = '';
                 break;
             case '-':
                 console.log('click subtract');
+                this.countingResult = this.result + " -";
+                this.result = '';
                 break;
             case '+':
+                console.log('click add');
                 this.countingResult = this.result + " +";
                 this.result = '';
                 break;
+            case  'x^2':
+                console.log('click square');
+                this.countingResult = this.result + " *" + this.result;
+                this.result = '';
+                break;
+            case '.':
+                console.log('click decimal');
+                this.result = this.result + '.';
+                break;
+            case '%':
+              console.log('click modulo');
+              this.countingResult = this.result + " %";
+              this.result = '';
+              break;
             case '=':
+                console.log('click equals');
                 this.countingResult = this.countingResult + this.result;
                 this.result = eval(this.countingResult) + '';
                 this.countingResult = '';
